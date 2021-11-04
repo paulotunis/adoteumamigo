@@ -1,0 +1,18 @@
+{% extends "model-page.html" %} {% block content %} {% load static %}
+
+    <div class="container col-xxl-8 px-5 py-5 mt-4">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6 text-center">
+          <img src="{% static 'img/amigo.png' %}" alt="" class="mx-lg-auto img-fluid" width="450" height="auto" loading="lazy" />
+        </div>
+        <div class="col-lg-6">
+          <h1 class="display-5 fw-bold lh-1 mb-3 text-primary"><strong>Amigo não se compra, adote!</strong></h1>
+          <p class="lead">De acordo com a Organização Mundial da Saúde (OMS), existem mais de 30 milhões de animais abandonados no Brasil, entre cães e gatos. A maioria desses animais, quando não resgatada,  vive sujeita afome, doenças, exposição ao tempo, riscos de atropelamento e traumas que interferem em seu bem-estar mental e comportamento.  Você pode ajudar a mudar isso! Somos uma associação sem fins lucrativos que se dedica a resgatar, acolher e encontrar um bom lar para animais em situação de risco, abandonados e maltratados. Atualmente contamos com estrutura para abrigar cerca de 200 animais para que sejam tratados e preparados para receberem novos lares. Todo o processo de adoção é bastante criterioso e acompanhado passo a passo para que a adoção seja bem-sucedida.</p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+            <a class="btn btn-primary btn-lg px-4 me-md-2" href="/pet/all/">Adote um Amigo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

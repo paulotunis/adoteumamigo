@@ -1,0 +1,55 @@
+{% extends "model-page.html" %} {% block content %}
+<br/>
+<h1 class="text-center mt-5 mb-0 text-primary"><strong>Detalhes do Pet</strong></h1>
+<br/>
+
+<!-- Ini Modal -->
+<div class="modal fade" id="modal_confirm">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Tem certeza que deseja excluir?</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body text-right">
+                <a href="/pet/delete/{{ pet.id }}/">
+                    <button type="button" class="btn btn-danger">EXCLUIR</button>
+                </a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">CANCELAR</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modal -->
+
+<div class="container mb-2">
+    <div class="row mx-auto">
+        <div class="col-sm-12 col-md-12 col-lg-4">
+            <img src="{{ pet.photo.url }}" alt="Norway" class="img-fluid img-thumbnail" />
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-8 px-auto">
+            <h4>Contato</h4>
+            <p><b>Tel.: </b>{{ pet.phone }}</p>
+            <p><b>E-mail: </b>{{ pet.email }}</p>
+            <p><b>Detalhes: </b>{{ pet.description }}</p>
+            {% if request.user == pet.user %}
+            <a href="/pet/register/?id={{ pet.id }}">
+                <button type="button" class="btn btn-primary">Alterar</button>
+            </a>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal_confirm">Excluir</button>
+            {% else %}
+
+            <a href="https://wa.me/55{{ pet.phone }}?text=Gostaria%20de%20informacoes%20sobre%20adocao%20do%20Pet {{ pet.id }}" target="_blank">
+                <button type="button" class="btn btn-success"><i class="fab fa-whatsapp"> </i> Entrar em Contato</button>
+            </a>
+
+            {% endif %}
+        </div>
+    </div>
+</div>
+<br />
+<br />
+{% endblock %}

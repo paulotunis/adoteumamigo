@@ -1,0 +1,18 @@
+{% extends "model-page.html" %} {% block content %} {% load static %}
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+
+<body class="text-center">
+    <form class="form-signin shadow bg-white rounded" action="submit" , method="POST">
+        {% csrf_token %}
+        <h1 class="h2 mb-4 font-weight-normal text-primary"><strong>Login</strong></h1>
+        <input type="text" class="form-control" placeholder="Usuário" name="username" required autofocus />
+        <input type="password" class="form-control" placeholder="Senha" name="password" required autofocus />
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+        <br />
+        {% if messages %} {% for message in messages %}
+        <div class="alert alert-danger">{{ message }}</div>
+        {% endfor %} {% endif %}
+    </form>
+</body>
+{% endblock %}>

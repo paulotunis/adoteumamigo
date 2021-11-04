@@ -1,0 +1,59 @@
+{% extends "model-page.html" %} {% block content %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/cadastro.css' %}" />
+
+<div class="form-group d-flex justify-content-center">
+    <h1 class="text-center text-primary"><strong>Cadastrar Pet</strong></h1>
+</div>
+
+<form enctype="multipart/form-data" action="submit" , method="POST">
+    {% csrf_token %}
+    <div class="container">
+        <input type="number" class="form-control" name="pet_id" value="{{ pet.id }}" hidden />
+
+        <div class="form-group">
+            <div class="col-sm offset-sm">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" name="email" value="{{ pet.email }}" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm offset-sm">
+                <label for="phone">Telefone:</label>
+                <input type="tel" class="form-control" name="phone" value="{{ pet.phone }}" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm offset-sm">
+                <label for="city">Cidade:</label>
+                <input type="text" class="form-control" name="city" value="{{ pet.city }}" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm offset-sm">
+                <label for="description">Descrição:</label>
+                <textarea class="form-control" rows="5" name="description">{{ pet.description }}</textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm offset-sm">
+                <a href="/media/{{ pet.photo }}" target="_blank">Foto atual</a>
+                <input type="file" class="btn btn-file" name="file" accept="image/*" />
+            </div>
+        </div>
+
+        <div class="form-group pb-5 mb-4">
+            <div class="col-sm offset-sm">
+                <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2">
+                    {% if pet %} Alterar {% else %} Cadastrar {% endif %}
+                </button>
+            </div>
+        </div>
+        <br />
+
+        {% endblock %}
+    </div>
+</form>
