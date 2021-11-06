@@ -120,3 +120,11 @@ STATIC_URL = "/static/"
 
 django_on_heroku.settings(locals())
 
+AWS_ACCESS_KEY_ID = "AKIAZ4FHFSDJ7O2KGSEZ"
+AWS_SECRET_ACCESS_KEY = "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"
+AWS_STORAGE_BUCKET_NAME = "fotos-adoteumamigo"
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
