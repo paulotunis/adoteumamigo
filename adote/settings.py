@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "d11cr&8vh)9_76ryn_05x*)8e%*b=+blqb0f)d7a=0th9n#5pe"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["codesospet.herokuapp.com", "127.0.0.1"]
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
@@ -101,7 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "pt-br"
 
 TIME_ZONE = "UTC"
 
@@ -120,6 +120,7 @@ STATIC_URL = "/static/"
 
 django_on_heroku.settings(locals())
 
+# Configurações Amazon S3
 AWS_ACCESS_KEY_ID = "AKIAZ4FHFSDJ7O2KGSEZ"
 AWS_SECRET_ACCESS_KEY = "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"
 AWS_STORAGE_BUCKET_NAME = "fotos-adoteumamigo"
@@ -127,4 +128,3 @@ AWS_STORAGE_BUCKET_NAME = "fotos-adoteumamigo"
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
