@@ -26,7 +26,7 @@ SECRET_KEY = "**************************************************"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["adoteumamigo.herokuapp.com"]
+ALLOWED_HOSTS = ["adoteumamigo.herokuapp.com", "127.0.0.1", "localhost"]
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
@@ -115,9 +115,8 @@ STATIC_URL = "/static/"
 
 django_on_heroku.settings(locals())
 
-
-AWS_ACCESS_KEY_ID = "********************"
-AWS_SECRET_ACCESS_KEY = "***************"
+AWS_ACCESS_KEY_ID = "**************************************************"
+AWS_SECRET_ACCESS_KEY = "**************************************************"
 AWS_STORAGE_BUCKET_NAME = "fotos"
 
 AWS_S3_FILE_OVERWRITE = False
