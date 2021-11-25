@@ -21,12 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "d11cr&8vh)9_76ryn_05x*)8e%*b=+blqb0f)d7a=0th9n#5pe"
+SECRET_KEY = "**************************************************"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["adoteumamigo.herokuapp.com", "127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["adoteumamigo.herokuapp.com"]
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
@@ -115,10 +115,10 @@ STATIC_URL = "/static/"
 
 django_on_heroku.settings(locals())
 
-# Configurações Amazon S3
-AWS_ACCESS_KEY_ID = "AKIAZ4FHFSDJ7O2KGSEZ"
-AWS_SECRET_ACCESS_KEY = "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"
-AWS_STORAGE_BUCKET_NAME = "fotos-adoteumamigo"
+
+AWS_ACCESS_KEY_ID = "********************"
+AWS_SECRET_ACCESS_KEY = "********************"
+AWS_STORAGE_BUCKET_NAME = "fotos"
 
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
