@@ -26,7 +26,7 @@ SECRET_KEY = "d11cr&8vh)9_76ryn_05x*)8e%*b=+blqb0f)d7a=0th9n#5pe"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["adoteumamigo.herokuapp.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["adoteumamigo.herokuapp.com", "127.0.0.1", "localhost"]
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
