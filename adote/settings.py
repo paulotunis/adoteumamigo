@@ -117,7 +117,7 @@ django_on_heroku.settings(locals())
 
 
 AWS_ACCESS_KEY_ID = "********************"
-AWS_SECRET_ACCESS_KEY = "********************"
+AWS_SECRET_ACCESS_KEY = "***************"
 AWS_STORAGE_BUCKET_NAME = "fotos"
 
 AWS_S3_FILE_OVERWRITE = False
